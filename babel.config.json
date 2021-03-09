@@ -1,0 +1,24 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "targets": {
+        "esmodules": true
+      }
+    }]
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-export-default-from",
+    [ "babel-plugin-root-import", {
+      "paths": [
+        {
+          "rootPathSuffix": "./src",
+          "rootPathPrefix": "~/"
+        },
+        {
+          "rootPathSuffix": "./",
+          "rootPathPrefix": "!/"
+        }
+      ]
+    }]
+  ]
+}
